@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "870609839159",
+    "project_id": "techm-63bf3",
+    "storage_bucket": "techm-63bf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870609839159:android:4d1f00278b77e153d04bb2",
+        "android_client_info": {
+          "package_name": "com.example.techm.techm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870609839159-rqftinghkmaued6mmsb7fqse5sf1vtn5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-mLKzKxZUFNIR55tc9EaxeGqQldruBAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870609839159-rqftinghkmaued6mmsb7fqse5sf1vtn5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
