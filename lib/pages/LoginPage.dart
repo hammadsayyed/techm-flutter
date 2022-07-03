@@ -17,11 +17,12 @@ class _LoginPageState extends State<LoginPage> {
   String email = '';
   String photoUrl = '';
   bool isSignedIn = false;
+  bool isLoading = false;
   late GoogleSignInAccount? user;
 
   @override
   Widget build(BuildContext context) {
-    return isSignedIn ? signedInWidget()
+    return isLoading ? const Center(child: CircularProgressIndicator()) : isSignedIn ? signedInWidget()
         : Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -78,6 +79,9 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> _handleSignIn() async {
     try {
+      setState(() {
+        isLoading = true;
+      });
       user = await _googleSignIn.signIn();
       if(user != null) {
         setState(() {
@@ -85,10 +89,14 @@ class _LoginPageState extends State<LoginPage> {
           email = user?.email ?? '';
           photoUrl = user?.photoUrl ?? '';
           isSignedIn = true;
+          isLoading = false;
         });
       }
       // isSignedIn
     } catch (error) {
+      setState(() {
+        isLoading = false;
+      });
       print('_handleSignIn error');
       print(error);
     }

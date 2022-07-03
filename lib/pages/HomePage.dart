@@ -1,8 +1,5 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:techm/pages/MainPage.dart';
-
 import '../Constants.dart';
 
 class HomePage extends StatelessWidget {
